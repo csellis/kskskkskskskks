@@ -6,9 +6,11 @@ export async function get({ params }) {
 		email: 'me@chrisellis.dev'
 	}
 
+	let wizards = await fetch('https://wizard-world-api.herokuapp.com/Wizards')
+
 	if (item) {
 	  return {
-		body: { item }
+		body: { item, wizards }
 	  };
 	}
    
